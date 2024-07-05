@@ -6,11 +6,9 @@
 <?php
 	if (!empty($_SESSION['student'])) {
 ?>
-		<li><a href="lookupPeople.php">Search People</a></li>
-		<li><a href="lookupVehicle.php">Search Vehicles</a></li>
-		<li><a href="addVehicle.php">Add a Vehicle</a></li>
-		<li><a href="report.php">Report an Incident</a></li>
-		<li><a href="retrieveIncidents.php">Display Incidents</a></li>
+	
+		<li><a href="addVehicle.php">Add a Sticker</a></li>
+		<li><a href="report.php">Report </a></li>
 		<li><a href="changePassword.php">Change Password</a></li>
         <li><a href="logOut.php">Log Out</a></li>
 		<!-- Admin -->
@@ -20,6 +18,7 @@
 ?>
 		<li><a href="createOfficer.php">Manage Student Account</a></li>
 		<li><a href="addFines.php">Status</a></li>
+		<li><a href="lookupVehicle.php">Search Student</a></li>
         <li><a href="logOut.php">Log Out</a></li>
 <?php
 	}

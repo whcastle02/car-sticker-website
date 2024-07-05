@@ -67,6 +67,8 @@ if (!empty($_SESSION['student'])) {
     $result = $conn->query($query);
 
     if ($result->num_rows > 0) {
+
+
         echo '<table border="1">';
         echo '<tr><th>Matric ID</th><th>Name</th><th>Sticker ID</th><th>License Expired</th><th>Vehicle Type</th><th>Vehicle Colour</th><th>Vehicle Brand</th><th>Plate No</th><th>Insurance Expired</th></tr>';
         while ($row = $result->fetch_assoc()) {
@@ -90,8 +92,15 @@ if (!empty($_SESSION['student'])) {
             echo '<td>' . htmlspecialchars($vehicle['plate_no'] ?? 'N/A') . '</td>';
             echo '<td>' . htmlspecialchars($vehicle['insurance_expired'] ?? 'N/A') . '</td>';
             echo '</tr>';
+
         }
+       
         echo '</table>';
+        echo '<form method="post" action="export.php">';
+        echo '<button type="submit" name="export_type" value="pdf">Export to PDF</button>';
+        echo '</form>';
+
+        
     } else {
         echo "No students found.";
     }

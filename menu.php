@@ -2,7 +2,7 @@
 <ul class="navbar">
 	<li><a href="index.php">Home</a></li>
 	
-	<!-- Officer -->
+	<!-- Student -->
 <?php
 	if (!empty($_SESSION['student'])) {
 ?>
